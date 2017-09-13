@@ -110,6 +110,7 @@ h4{
 .mainPageContent{
 	width: 1200px;
 	max-width: 100%;
+	justify-content: center;
 }
 .flex-container {
     display: flex;
