@@ -99,8 +99,19 @@ h4{
 	background-color: #EFF0F1;
 }
 
+
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .descriptionPlaceholder{
 	display: flex-inline;
+	background-color: #232323;
 }
 .descriptionPlaceholder img{
 	width: 1920px;
