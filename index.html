@@ -10,15 +10,28 @@
     <link rel="stylesheet" href="css/navbar.css">
     <!-- Favicon link -->
     <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Including the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Script to dynamically load webpages -->
+    <script>
+    $(document).ready(function() {
+        $("#mainContent").load('./main.html');
+        $("#SingleNavigation li a").click(function(e){
+            e.preventDefault();
+            $("#mainContent").load(e.target.href);
+        })
+
+    });
+    </script>
 </head>
 
 <body>
     <!-- Kode for navigasjonsbaren til siden -->
-    <div class="navbar">
+    <div class="navbar" id="SingleNavigation">
         <ul class="navigation">
             <li><a href="index.html">Home</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Dog">About dogs</a></li>
-            <li><a href="https://omfgdogs.com/">OmfgDogs</a></li>
+            <li><a href="//en.wikipedia.org/wiki/Dog">About dogs</a></li>
+            <li><a href="//omfgdogs.com/">OmfgDogs</a></li>
         </ul>
     </div>
     <!-- Knapp for å skru forsidebilde på/av -->
@@ -31,37 +44,8 @@
             <img src="images/coffee.jpg" alt="Kaffe forsidebilde">
         </div>
     </div>
-    <div class="flex-container mainPageContent">
-        <!-- Hovedsiden -->
-        <div class="flex-item fill_width">
-            <h1>Kaffe</h1>
-            <p> Fra tidenes morgen har kaffe vært en essensiell del av menneskets hverdag, og drivkraften for mer har vært en hjørnestein for både den intellektuelle og fysiske evolusjonen av den menneskelige art. Nedenfor finner du en rekke interessante artikler om de fantastiske mulihetene du kan få av kaffe. </p>
-        </div>
-        <!-- 3-column seksjon -->
-        <!-- Seksjon 1 -->
-        <div class="flex-item columnx">
-            <h3>Sliten?</h3>
-            <img src="images/tired_student.jpg" alt="Artikkelbilde">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-            </p>
-        </div>
-        <!-- Seksjon 1 -->
-        <div class="flex-item columnx">
-            <h3>Java Utvikling</h3>
-            <img src="images/java.jpg" alt="Artikkelbilde">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-            </p>
-        </div>
-        <!-- Seksjon 1 -->
-        <div class="flex-item columnx">
-            <h3>100 Kopper Kaffe?</h3>
-            <img src="images/futurama.jpg" alt="Artikkelbilde">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-            </p>
-        </div>
+    <div class="flex-container mainPageContent" id="mainContent">
+        
     </div>
     <!-- Javascripts -->
     <script src="js/navbar.js"></script>
