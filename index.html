@@ -7,7 +7,7 @@
     <title>Kaffe</title>
     <!-- Custom Stylesheets-->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navbar.css">
+    <!-- <link rel="stylesheet" href="css/navbar.css"> -->
 
     <!-- Favicon link -->
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -29,7 +29,7 @@
 <body>
     <!-- Kode for navigasjonsbaren til siden -->
     <div class="navbar" id="SingleNavigation">
-        <ul class="navigation"> 
+        <ul class="navigation">
             <li class="verticalLine"></li>
             <li><a href="index.html">Kaffe</a></li>
             <li><a href="media.html">Slideshow</a></li>
@@ -38,13 +38,13 @@
     </div>
 
     <!-- Knapp for å skru forsidebilde på/av -->
-    <div onclick="toggleDescriptionField()" class="toggleDisplayImg">
+    <div class="toggleDisplayImg">
         <h5>Vis/skjul forsidebilde</h5>
     </div>
     <!-- Forsidebilde-box -->
     <div class="flex-item" id="showDescription">
         <div class="descriptionPlaceholder centered">
-            <img onclick="toggleDescriptionField()" src="images/coffee.jpg" alt="Kaffe forsidebilde">
+            <img src="images/coffee.jpg" alt="Kaffe forsidebilde">
         </div>
     </div>
 
