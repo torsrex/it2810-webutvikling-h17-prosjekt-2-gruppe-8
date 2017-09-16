@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kaffe</title>
+    <!-- Custom Stylesheets-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/navbar.css"> -->
+
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Including the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Script to dynamically load webpages -->
+    <script>
+    $(document).ready(function() {
+        $("#mainContent").load('./main.html');
+        $("#SingleNavigation li a").click(function(e){
+            e.preventDefault();
+            $("#mainContent").load(e.target.href);
+        })
+
+    });
+    </script>
+</head>
+
+<body>
+    <!-- Kode for navigasjonsbaren til siden -->
+    <div class="navbar" id="SingleNavigation">
+        <ul class="navigation">
+            <li class="verticalLine"></li>
+            <li><a href="index.html">Kaffe</a></li>
+            <li><a href="media.html">Slideshow</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+    </div>
+
+    <!-- Knapp for å skru forsidebilde på/av -->
+    <div class="toggleDisplayImg">
+        <h5>Vis/skjul forsidebilde</h5>
+    </div>
+    <!-- Forsidebilde-box -->
+    <div class="flex-item" id="showDescription">
+        <div class="descriptionPlaceholder centered">
+            <img src="images/coffee.jpg" alt="Kaffe forsidebilde">
+        </div>
+    </div>
+
+    <div class="flex-container mainPageContent" id="mainContent">
+        <!-- Alt side-spesifikt innhold her! -->
+        <!-- Alt side-spesifikt innhold her! -->
+    </div>
+
+    <div class="footer">
+        <p> Copyright: Best Group Ever® </p>
+    </div>
+
+    <!-- Javascripts -->
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>
