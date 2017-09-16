@@ -1,7 +1,7 @@
 
 // Initializing variables and list of images
-var slideshowimages = ["images/coffee.jpg", "images/futurama.jpg", "images/java.jpg", 
-                       "images/tired_student.jpg"];
+var slideshowimages = ["images/slideshow_images/beans.jpg", "images/slideshow_images/types.jpg", "images/slideshow_images/2017.jpg", 
+                       "images/slideshow_images/stripa.jpg"];
 var i = 0;
 var diff = 25;
 var timer = null;
@@ -9,7 +9,7 @@ var timer = null;
 // Updates src image in media.html every fifth second from the list of images
 function slideShow() { 
     document.getElementById("slide").src = slideshowimages[i];
-    document.getElementById("slide_name").innerHTML = slideshowimages[i].split("/")[1].split(".")[0];
+    document.getElementById("slide_name").innerHTML = slideshowimages[i].split("/")[2].split(".")[0];
 
     // Current image indicators under image created by canvas
     // Creates n number of indicators based on the number of images, the selected one is filled

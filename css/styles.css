@@ -13,27 +13,28 @@ body{
 	background-color: #F1F2EF;
 	margin: 0px;
 	padding: 0px;
-	max-width: 100%;
+	min-width: 100%;
+	min-height: 100%;
 }
-h3{
+h1{
 	text-align: center;
+
 }
-h4{
+h5{
 	font-weight: 400;
 	padding: 0px;
 	margin: 0px;
 }
 
 
-/* Navbar styling ------------------------------------*/
+/* Navbar styling -----------------------------------------------------*/
 .navigation {
     list-style: none;
     margin: 0;
-
-    background: #333;
-
+    background: #000;
     display: flex;
     justify-content: center;
+    padding-right: 90px;
 }
 
 .navigation a {
@@ -41,16 +42,14 @@ h4{
     display: block;
     padding: 1em;
     color: #FFF;
+    min-width: 75px;
+    text-align: center;
 }
-
 .navigation a:hover {
-    background-color: #607D8B;
+    background-color: #0f0f0f;
 }
-
-
 
 /* Ensures menu fits on multiple device sizes */
-
 @media all and (max-width: 800px) {
     .navigation {
         justify-content: space-around;
@@ -76,30 +75,53 @@ h4{
         border-bottom: none;
     }
 }
+@media all and (min-width: 600px) {
+	.verticalLine{
+		border-right:  solid #666 1px;
+		background-image: url("../images/logo_small1.png");
+		background-size: 100%;
+		width: 53px;
+	}
+}
 
 /* End Navbar */
+
+/* Footer styling ---------------------------------------------------------*/
+.footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-weight: 100;
+
+	color: #fff;
+	background-color: #000;
+	height: 40px;
+}
+/* End footer styling */
 
 
 /* Styling for hoved-content ------------------------------------------ */
 .toggleDisplayImg{
-	height: 35px;
-	line-height: 35px;
-	background-color: #232323;
+	height: 30px;
+	line-height: 30px;
+	background-color: #141414;
 	text-align: center;
-	color: #F7FAFF;
+	color: #aaa;
 	cursor: pointer;
+}
+.toggleDisplayImg h5{
+	font-weight: 100;
 }
 #hideDescription{
 	height: 0px;
 	visibility: hidden;
-
 }
 #showDescription{
 	visibility: visible;
 	background-color: #EFF0F1;
+	text-align: center;
 }
-
-
 
 .centered {
     display: flex;
@@ -107,15 +129,13 @@ h4{
     justify-content: center;
 }
 
-
-
 .descriptionPlaceholder{
-	display: flex-inline;
 	background-color: #232323;
 }
 .descriptionPlaceholder img{
 	width: 1920px;
 	max-width: 100%;
+	cursor: pointer;
 }
 
 .mainPageContent{
@@ -142,4 +162,16 @@ h4{
 .fill_width{
 	width: 100%;
 	text-align: center;
+	justify-content: center;
+}
+.center_text{
+	width: 1000px;
+	max-width: 80%;
+	text-align: center;
+	margin: auto;
+}
+
+/* Slideshow styling --- */
+#slide{
+	cursor: pointer;
 }

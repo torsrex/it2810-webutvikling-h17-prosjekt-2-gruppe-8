@@ -8,6 +8,7 @@
     <!-- Custom Stylesheets-->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css">
+
     <!-- Favicon link -->
     <link rel="shortcut icon" href="images/favicon.ico" />
     <!-- Including the jQuery library -->
@@ -28,26 +29,34 @@
 <body>
     <!-- Kode for navigasjonsbaren til siden -->
     <div class="navbar" id="SingleNavigation">
-        <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="//en.wikipedia.org/wiki/Dog">About dogs</a></li>
+        <ul class="navigation"> 
+            <li class="verticalLine"></li>
+            <li><a href="index.html">Kaffe</a></li>
+            <li><a href="media.html">Slideshow</a></li>
             <li><a href="about.html">Om oss</a></li>
         </ul>
     </div>
+
     <!-- Knapp for å skru forsidebilde på/av -->
     <div onclick="toggleDescriptionField()" class="toggleDisplayImg">
-        <h4>Vis/skjul forsidebilde</h4>
+        <h5>Vis/skjul forsidebilde</h5>
     </div>
     <!-- Forsidebilde-box -->
     <div class="flex-item" id="showDescription">
         <div class="descriptionPlaceholder centered">
-            <img src="images/coffee.jpg" alt="Kaffe forsidebilde">
+            <img onclick="toggleDescriptionField()" src="images/coffee.jpg" alt="Kaffe forsidebilde">
         </div>
     </div>
+
     <div class="flex-container mainPageContent" id="mainContent">
-        
+        <!-- Alt side-spesifikt innhold her! -->
+        <!-- Alt side-spesifikt innhold her! -->
     </div>
+
+    <div class="footer">
+        <p> Copyright: Best Group Ever® </p>
+    </div>
+
     <!-- Javascripts -->
     <script src="js/navbar.js"></script>
 </body>
