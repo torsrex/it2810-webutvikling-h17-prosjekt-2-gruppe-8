@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  // Script to dynamically load webpages
+
   $("#mainContent").load('./main.html');
   $("#SingleNavigation li a").click(e => {
     $("#mainContent").empty();
@@ -10,6 +12,7 @@ $(document).ready(function() {
     // subPage !== "index" && history.pushState(null, null, `${subPage}`)
   })
 
+  // Toggle the hero img
   const myNavbar = $(".descriptionPlaceholder")
   const navbarBtn = $('.toggleDisplayImg')
 

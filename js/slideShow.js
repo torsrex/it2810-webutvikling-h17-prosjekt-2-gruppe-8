@@ -1,5 +1,5 @@
-// Initializing variables and list of images
 if (typeof BASE === 'undefined') {
+  // Initializing variables and list of images
   const BASE = "images/slideshow_images"
   const slideshowimages = ["beans", "types", "2017", "stripa"];
   let i = 0;
