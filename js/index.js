@@ -1,6 +1,9 @@
 $(document).ready(() => {
 
-  // Script to dynamically load webpages
+    //Fix xmlhttprequest deprecated warning
+    $.ajaxPrefilter(function (options, original_Options, jqXHR) {
+        options.async = true;
+    });
 
   // This line removes the warning from the console.
   $.ajaxPrefilter( ( options, originalOptions, jqXHR ) => { options.async = true; })
@@ -15,13 +18,19 @@ $(document).ready(() => {
     // subPage !== "index" && history.pushState(null, null, `${subPage}`)
   })
 
-  // Toggle the hero img
-  const myNavbar = $(".descriptionPlaceholder")
-  const navbarBtn = $('.toggleDisplayImg')
+        e.preventDefault();
+        const subPage = e.target.getAttribute("href");
+        $("#mainContent").load(`${subPage}.html`);
+        // Change URL on subpage click.
+        // subPage !== "index" && history.pushState(null, null, `${subPage}`)
+    });
 
-  navbarBtn.on('click', () => {
-    myNavbar.toggleClass("hidden");
-  })
+    // Toggle the hero img
+    const myNavbar = $(".descriptionPlaceholder");
+    const navbarBtn = $('.toggleDisplayImg');
 
+    navbarBtn.on('click', () => {
+        myNavbar.toggleClass("hidden");
+    })
 
 });
