@@ -1,220 +1,215 @@
-/* Generell styling */
+/* Generel styling */
 
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  background-color: #F1F2EF;
-  margin: 0;
-  padding: 0;
-  min-width: 100vh;
-  min-height: 100vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    background-color: #F1F2EF;
+    margin: 0;
+    padding: 0;
+    min-width: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
-  margin-top: 1em;
-  text-align: center;
+    margin-top: 1em;
+    text-align: center;
 }
 
 h5 {
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
-
 
 /* Navbar styling -----------------------------------------------------*/
 
 .navigation {
-  list-style: none;
-  margin: 0;
-  background: #000;
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
 }
 
 .navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: #FFF;
-  min-width: 75px;
-  text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #FFF;
+    min-width: 75px;
+    text-align: center;
 }
 
 .navigation a:hover {
-  background-color: #0f0f0f;
+    background-color: #0f0f0f;
 }
-
 
 /* Ensures menu fits on multiple device sizes */
 
 @media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
+    .navigation {
+        justify-content: space-around;
+    }
 }
 
 @media all and (max-width: 600px) {
-  .navigation {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  .navigation a {
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: .3s
-  }
-  .navigation a:hover {
-    color: pink
-  }
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        transition: .3s
+    }
+
+    .navigation a:hover {
+        color: pink
+    }
 }
 
 @media all and (min-width: 600px) {
-  .navigation li:first-of-type {
-    position: absolute;
-    left: 0;
-    cursor: pointer;
-  }
-  .navigation li:first-of-type:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 53px;
-    height: 53px;
-    background-image: url("../images/logo_small1.png");
-    background-size: 100%;
-  }
+    .navigation li:first-of-type {
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .navigation li:first-of-type:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 53px;
+        height: 53px;
+        background-image: url("../images/logo_small1.png");
+        background-size: 100%;
+    }
 }
 
-
 /* End Navbar */
-
 
 /* Footer styling ---------------------------------------------------------*/
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-weight: 100;
-  color: #fff;
-  background-color: #000;
-  height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: 100;
+    color: #fff;
+    background-color: #000;
+    height: 40px;
 }
 
-
 /* End footer styling */
-
 
 /* Styling for hoved-content ------------------------------------------ */
 
 .toggleDisplayImg {
-  position: absolute;
-  top: 48px;
-  z-index: 1;
-  height: 30px;
-  line-height: 30px;
-  background-color: #141414;
-  width: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #aaa;
-  cursor: pointer;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+    position: absolute;
+    top: 48px;
+    z-index: 1;
+    height: 30px;
+    line-height: 30px;
+    background-color: #141414;
+    width: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #aaa;
+    cursor: pointer;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 .toggleDisplayImg h5 {
-  font-weight: 100;
+    font-weight: 100;
 }
 
 #hideDescription {
-  height: 0;
-  visibility: hidden;
+    height: 0;
+    visibility: hidden;
 }
 
 #showDescription {
-  visibility: visible;
-  background-color: #EFF0F1;
-  text-align: center;
+    visibility: visible;
+    background-color: #EFF0F1;
+    text-align: center;
 }
 
 .centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .descriptionPlaceholder {
-  background-color: #232323;
+    background-color: #232323;
 }
 
 .descriptionPlaceholder img {
-  width: 1920px;
-  max-width: 100%;
-  cursor: pointer;
+    width: 1920px;
+    max-width: 100%;
+    cursor: pointer;
 }
 
 .mainPageContent {
-  width: 1200px;
-  max-width: 100%;
-  justify-content: center;
+    width: 1200px;
+    max-width: 100%;
+    justify-content: center;
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 10px auto;
 }
 
 .flex-item {
-  margin-right: auto;
-  position: relative;
+    margin-right: auto;
+    position: relative;
 }
 
 .columnx {
-  align-self: flex-start;
-  position: relative;
-  width: 370px;
-  margin: 0 15px;
+    align-self: flex-start;
+    position: relative;
+    width: 370px;
+    margin: 0 15px;
 }
 
 .fill_width {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
 .center_text {
-  width: 1000px;
-  max-width: 80%;
-  text-align: center;
-  margin: auto;
+    width: 1000px;
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
 }
-
 
 /* Slideshow styling --- */
 
 #slide {
-  cursor: pointer;
+    cursor: pointer;
 }
-
 
 /* Toggle hero img */
 
 .hidden {
-  display: none
+    display: none
 }
