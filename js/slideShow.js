@@ -1,6 +1,6 @@
 if (typeof BASE === 'undefined') {
   // Initializing variables and list of images
-  const BASE = "images/slideshow_images"
+  const BASE = "images/slideshow_images";
   const slideshowimages = ["beans", "types", "2017", "stripa"];
   let i = 0;
   let diff = 25;
@@ -18,7 +18,7 @@ if (typeof BASE === 'undefined') {
     // Creates n number of indicators based on the number of images, the selected one is filled
     const canvas = document.getElementById("canvas");
     const context = canvas.getContext("2d");
-    const {width, height} = canvas
+    const {width, height} = canvas;
     context.clearRect(0, 0, width, height);
 
     let x = 87;
@@ -41,7 +41,7 @@ if (typeof BASE === 'undefined') {
     }
 
     // Makes sure the next image is displayed, or the first one if at the end
-    i < slideshowimages.length - 1 ? i++ : i = 0
+    i < slideshowimages.length - 1 ? i++ : i = 0;
     timer = setTimeout("slideShow()",5000);
   }
 
