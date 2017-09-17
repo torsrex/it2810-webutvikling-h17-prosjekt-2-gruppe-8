@@ -3,8 +3,8 @@ $(document).ready(function() {
   // Script to dynamically load webpages
 
   $("#mainContent").load('./main.html');
-  $("#SingleNavigation li a").click(e => {
-    $("#mainContent").empty();
+  $("#SingleNavigation").find("li a").click(e => {
+
     e.preventDefault();
     const subPage = e.target.getAttribute("href")
     $("#mainContent").load(`${subPage}.html`);

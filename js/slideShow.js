@@ -23,7 +23,7 @@ if (typeof BASE === 'undefined') {
 
     let x = 87;
     for(let j = 0; j < slideshowimages.length; j++) {
-      if(j == i) {
+      if(j === i) {
         context.beginPath();
         context.arc(x + diff, 10, 4, 0, 2 * Math.PI);
         context.stroke();
