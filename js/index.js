@@ -1,6 +1,9 @@
-$(document).ready(function() {
+$(document).ready(() => {
 
   // Script to dynamically load webpages
+
+  // This line removes the warning from the console.
+  $.ajaxPrefilter( ( options, originalOptions, jqXHR ) => { options.async = true; })
 
   $("#mainContent").load('./main.html');
   $("#SingleNavigation li a").click(e => {
