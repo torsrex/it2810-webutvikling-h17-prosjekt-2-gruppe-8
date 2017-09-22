@@ -244,6 +244,9 @@ footer p {
   .wrap {
     max-width: 40%;
   }
+  .two-clm-wrap {
+    max-width: 40%;
+  }
   .fill-width p {
     margin: 0 auto;
     max-width: 90%
@@ -257,6 +260,9 @@ footer p {
   }
   .wrap {
     max-width: 30%;
+  }
+  .two-clm-wrap {
+    max-width: 40%;
   }
 }
 
