@@ -15,7 +15,7 @@ app.get(/^(.+)$/, (req, res) => {
 })
 
 app.listen(8082, () => {
-    console.log('Example app listening on port 8082!')
+    console.log('Web server listening on port 8082!')
 })
 
 opn('http://localhost:8082').then(() => {

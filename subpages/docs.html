@@ -22,9 +22,8 @@
     })
 
     app.listen(8082, () => {
-        console.log('Example app listening on port 8082!')
+        console.log('Web server listening on port 8082!')
     })
-
     opn('http://localhost:8082').then(() => {
         console.log("...")
     })
@@ -49,25 +48,25 @@
     <li>
     <p>
       Navigasjonsbaren er implementert fra bunnen av. jQuery sin event listener ble brukt til å laste inn sider dynamisk med AJAX.
+      Kodesnutten under viser også eksempel på bruk av jQuery selector-funksjonaliteten og bruk av funksjon som parameter.
     </p>
     <pre><code class="language-javascript">
-    $("#SingleNavigation li a").on("click", e => {
-      e.preventDefault();
-      const subPage = e.target.getAttribute("href")
-      $("#mainContent").load(`subpages/${subPage}.html`, () => {
-        console.log("yo");
-        switch (subPage) {
-          case "docs":
-            $.getScript("js/prism.js");
-            break;
-          case "media":
-            $.getScript("js/media.js");
-            break;
-          default:
-            return;
-        }
+    $("#SingleNavigation").find("li a").on("click", e => { //Funksjon som parameter til on()
+        e.preventDefault();
+        const subPage = e.target.getAttribute("href")
+        $("#mainContent").load(`subpages/${subPage}.html`, () => {
+          switch (subPage) {
+            case "docs":
+              $.getScript("js/prism.js");
+              break;
+            case "media":
+              $.getScript("js/media.js");
+              break;
+            default:
+              return;
+          }
+        })
       })
-    })
     </code></pre>
   </li>
 </ul>
