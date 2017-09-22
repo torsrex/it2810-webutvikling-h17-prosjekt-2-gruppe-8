@@ -4,11 +4,10 @@ $(document).ready(() => {
   $.ajaxPrefilter((options, original_Options, jqXHR)  => options.async = true)
 
   $("#mainContent").load("./subpages/main.html");
-  $("#SingleNavigation li a").on("click", e => {
+  $("#SingleNavigation").find("li a").on("click", e => {
     e.preventDefault();
     const subPage = e.target.getAttribute("href")
     $("#mainContent").load(`subpages/${subPage}.html`, () => {
-      console.log("yo");
       switch (subPage) {
         case "docs":
           $.getScript("js/prism.js");
@@ -25,7 +24,6 @@ $(document).ready(() => {
     // Toggle the hero img
     const myNavbar = $(".descriptionPlaceholder");
     const navbarBtn = $(".toggleDisplayImg");
-    const docsBtn = $(".docs-btn");
 
     navbarBtn.on("click", () => {
         myNavbar.toggleClass("hidden");
