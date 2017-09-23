@@ -1,13 +1,28 @@
 $(document).ready(() => {
 
+
+  const hamburger = $("#hamburger");
+  const navigation = $("nav ul");
+  const toggleHeroBtn = $(".toggle-hero-btn");
+  const heroImg = $(".hero-img");
+  const main = $("main")
+
   //Fix xmlhttprequest deprecated warning
   $.ajaxPrefilter((options, original_Options, jqXHR)  => options.async = true)
 
-  $("#mainContent").load("./subpages/main.html");
-  $("#SingleNavigation").find("li a").on("click", e => {
+  main.load("./subpages/main.html");
+  $("nav").find("li a").on("click", e => {
     e.preventDefault();
+    Array.from($("nav li a")).forEach(listElement => {
+      console.log(listElement);
+      if (listElement === e.target) {
+        listElement.classList.add('active-list-element')
+      } else {
+        listElement.classList.remove('active-list-element')
+      }
+    })
     const subPage = e.target.getAttribute("href")
-    $("#mainContent").load(`subpages/${subPage}.html`, () => {
+    main.load(`subpages/${subPage}.html`, () => {
       switch (subPage) {
         case "docs":
           $.getScript("js/prism.js");
@@ -22,20 +37,33 @@ $(document).ready(() => {
   })
 
     // Toggle the hero img
-    const myNavbar = $(".descriptionPlaceholder");
-    const navbarBtn = $(".toggleDisplayImg");
 
-    navbarBtn.on("click", () => {
-        myNavbar.toggleClass("hidden");
+
+    toggleHeroBtn.on("click", () => {
+        heroImg.toggleClass("hidden");
     })
-    $(window).on("resize", () => {
+
+
+    const toggleMenu = () => {
       if($(window).width() < 768) {
-        const hamburger = $("#hamburger");
-        const navigation = $(".navigation");
         hamburger.on("click", () => {
           hamburger.toggleClass("active");
           navigation.toggleClass("hidden");
         })
+      }
+    }
+
+    $(window).on("resize", () => {
+      toggleMenu()
+    })
+    toggleMenu()
+
+    $( window ).on( "orientationchange", e => {
+      if (screen.orientation.angle !== 0) {
+        navigation.removeClass("hidden")
+      }
+      else {
+        hamburger.addClass("active")
       }
     })
 
