@@ -1,11 +1,10 @@
-if (typeof BASE === 'undefined') {
+if (typeof BASE === "undefined") {
     // Initializing variables and list of images
     const BASE = "images/slideshow_images";
-    const slideshowimages = ["beans", "types", "2017", "stripa"];
+    const slideshowimages = ["beans", "types", "2017", "more beans"];
     let i = 0;
     let diff = 25;
     let timer = null;
-
     // Updates src image in media.html every fifth second from the list of images
     function slideShow() {
         if (!document.getElementById("slide")) {

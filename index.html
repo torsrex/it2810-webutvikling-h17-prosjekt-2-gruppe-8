@@ -5,50 +5,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kaffe</title>
-    <!-- Custom Stylesheets-->
-    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Favicon link -->
     <link rel="shortcut icon" href="images/favicon.ico"/>
 
+    <!-- Custom Stylesheets-->
+    <link rel="stylesheet" href="css/styles.css">
+
+
     <!-- Google font importering -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
-    <!-- Including the jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Javascripts -->
-    <script src="js/index.js"></script>
 </head>
 
 <body>
 <!-- Kode for navigasjonsbaren til siden -->
-<nav class="navbar" id="SingleNavigation">
-    <ul class="navigation">
-        <li></li>
-        <li><a href="main">Kaffe</a></li>
-        <li><a href="media">Slideshow</a></li>
-        <li><a href="about">Om oss</a></li>
-    </ul>
-    <!-- Knapp for å skru forsidebilde på/av -->
-    <div class="toggleDisplayImg">
-      <h5>Vis/skjul forsidebilde</h5>
-    </div>
-  </nav>
-
-  <!-- Forsidebilde-box -->
-  <div class="descriptionPlaceholder">
-    <img src="images/coffee.jpg" alt="Kaffe forsidebilde">
+<header>
+  <div id="hamburger" class="active">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+  <div class="menu">
+    <img class="logo" src="/images/logo_small.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="main" class="active-list-element">Kaffe</a></li>
+        <li><a href="media">Slideshow</a></li>
+        <li><a href="history">Historie</a></li>
+        <li><a href="about">Om oss</a></li>
+        <li class="docs-btn"><a href="docs">Dokumentasjon</a></li>
+      </ul>
+    </nav>
+    <div class="placeholder">
 
-<div class="flex-container mainPageContent" id="mainContent">
+    </div>
+  </div>
+  <button class="toggle-hero-btn">
+    <h5>Vis/skjul forsidebilde</h5>
+  </button>
+  <div class="hero">
+    <!-- Knapp for å skru forsidebilde på/av -->
+    <img class="hero-img" src="images/coffee.jpg" alt="Kaffe forsidebilde">
+  </div>
+</header>
+
+
+<main class="flex-container">
     <!-- Alt side-spesifikt innhold her! -->
-</div>
+</main>
 
 <footer class="footer">
-    <p> Copyright: Best Group Ever® </p>
+    <p> Best Group Ever©  </p>
 </footer>
 
 
+<!-- Including the external libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Javascripts -->
+<script src="js/main.js"></script>
 </body>
 
 </html>
