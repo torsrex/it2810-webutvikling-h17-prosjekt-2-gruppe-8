@@ -28,6 +28,8 @@ body {
 h1 {
   margin-top: 1em;
   text-align: center;
+  font-size: 200% ;
+  font-weight: bold;
 }
 
 h3 {
@@ -156,7 +158,7 @@ nav a {
   padding: .5em 1.5em;
   transition: .3s;
   border-radius: 1.5em;
-  margin: .5em 0
+  margin: .5em 0.2em;
 }
 
 nav a:hover, .active-list-element {
@@ -260,10 +262,16 @@ footer p {
     justify-content: space-evenly;
   }
   .fill-width {
-    min-width: 100%
+    min-width: 100%;
   }
   .flex-item p {
     padding: .5em
+  }
+  .flex-item img {
+    padding: .5em
+  }
+  .span-width{
+    min-width: 100%;
   }
 }
 
@@ -277,6 +285,10 @@ footer p {
   .fill-width p {
     margin: 0 auto;
     max-width: 90%
+  }
+  .fill-width img{
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 
@@ -305,7 +317,6 @@ footer p {
 
 #slide {
   cursor: pointer;
-  border: 15px solid var(--accent-color-3);
 }
 
 .map {
@@ -314,7 +325,7 @@ footer p {
   height: 70vh;
   max-height: 450px;
   background: var(--accent-color-2);
-  margin-bottom: 5vw
+  
 }
 
 
@@ -322,6 +333,17 @@ footer p {
 
 .hidden {
   display: none
+}
+
+.center-title h3{
+  text-align: center;
+  font-size: 150%;
+}
+.center-image{
+  justify-content: center;
+}
+.center-image img{
+  width: 750px;
 }
 
 
