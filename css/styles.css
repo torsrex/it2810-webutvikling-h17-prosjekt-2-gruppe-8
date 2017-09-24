@@ -305,7 +305,6 @@ footer p {
 
 #slide {
   cursor: pointer;
-  border: 15px solid var(--accent-color-3);
 }
 
 .map {
