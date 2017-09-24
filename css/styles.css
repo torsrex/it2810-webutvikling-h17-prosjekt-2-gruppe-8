@@ -262,9 +262,12 @@ footer p {
     justify-content: space-evenly;
   }
   .fill-width {
-    min-width: 100%
+    min-width: 100%;
   }
   .flex-item p {
+    padding: .5em
+  }
+  .flex-item img {
     padding: .5em
   }
   .span-width{
@@ -282,6 +285,10 @@ footer p {
   .fill-width p {
     margin: 0 auto;
     max-width: 90%
+  }
+  .fill-width img{
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 
@@ -318,7 +325,7 @@ footer p {
   height: 70vh;
   max-height: 450px;
   background: var(--accent-color-2);
-  margin-bottom: 5vw
+  
 }
 
 
@@ -331,6 +338,12 @@ footer p {
 .center-title h3{
   text-align: center;
   font-size: 150%;
+}
+.center-image{
+  justify-content: center;
+}
+.center-image img{
+  width: 750px;
 }
 
 
